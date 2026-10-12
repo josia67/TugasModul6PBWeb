@@ -34,21 +34,10 @@ export default function App() {
           <p className="error-msg">Batas maksimum (30) telah tercapai!</p>
         )}
         {kehadiran === 0 && (
-          <p
-            style={{ color: "#6c757d", fontSize: "13px", marginBottom: "10px" }}
-          >
-            Batas minimum (0) tercapai.
-          </p>
+          <p className="info-msg">Batas minimum (0) tercapai.</p>
         )}
 
-        <div
-          style={{
-            display: "flex",
-            gap: "10px",
-            justifyContent: "center",
-            marginTop: "15px",
-          }}
-        >
+        <div className="button-group">
           <button
             type="button"
             onClick={handleTambah}

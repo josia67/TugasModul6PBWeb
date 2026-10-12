@@ -133,7 +133,7 @@ export default function App() {
           />
         </div>
 
-        <div style={{ display: "flex", gap: "8px", marginBottom: "15px" }}>
+        <div className="filter-group">
           <button
             type="button"
             className={activeFilter === "all" ? "" : "secondary"}
@@ -158,13 +158,13 @@ export default function App() {
         </div>
 
         {filteredTasks.length === 0 ? (
-          <p style={{ textAlign: "center", color: "#777" }}>Belum ada tugas.</p>
+          <p className="empty-msg">Belum ada tugas.</p>
         ) : (
           <ul>
             {filteredTasks.map((task) => (
               <li key={task.id} className={task.completed ? "completed" : ""}>
                 {editingId === task.id ? (
-                  <div style={{ display: "flex", gap: "8px", width: "100%" }}>
+                  <div className="edit-row">
                     <input
                       type="text"
                       value={editingText}

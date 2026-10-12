@@ -4,15 +4,10 @@ function KartuProfil(props) {
   return (
     <section className="card">
       <h2>Profil Mahasiswa</h2>
-      <div style={{ textAlign: "center", marginBottom: "15px" }}>
-        <img
-          src="/assets/foto.jpeg"
-          alt={props.nama}
-          width="180"
-          style={{ borderRadius: "8px" }}
-        />
+      <div className="foto-wrap">
+        <img src="/assets/foto.jpeg" alt={props.nama} className="foto" />
       </div>
-      <div className="form-group">
+      <div className="data-diri">
         <p>
           <strong>Nama Lengkap:</strong> {props.nama}
         </p>
@@ -34,21 +29,11 @@ function DetailInformasi(props) {
   return (
     <section className="card">
       <h2>Tentang Saya</h2>
-      <p style={{ marginBottom: "10px" }}>
+      <p className="bio">
         Saya mahasiswa <strong>{props.prodi}</strong> yang tertarik pada{" "}
         <em>pengembangan web, struktur data, dan algoritma</em>.
       </p>
-      <blockquote
-        style={{
-          borderLeft: "4px solid #084d96",
-          paddingLeft: "10px",
-          fontStyle: "italic",
-          margin: "10px 0",
-          color: "#555",
-        }}
-      >
-        "{props.kutipan}"
-      </blockquote>
+      <blockquote className="kutipan">"{props.kutipan}"</blockquote>
 
       <h3>Keterampilan Teknis</h3>
       <ul>
