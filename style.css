@@ -1,0 +1,178 @@
+/* RESET DEFAULT */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  padding: 20px;
+  color: #333;
+}
+
+header {
+  background-color: #063567;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+header h1 {
+  color: #ffffff;
+  font-size: 26px;
+}
+
+main,
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card h2,
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 6px;
+  color: #063567;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #084d96;
+  outline: none;
+}
+
+button {
+  background-color: #084d96;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2787ee;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button.danger {
+  background-color: #d9534f;
+}
+button.danger:hover {
+  background-color: #c9302c;
+}
+button.secondary {
+  background-color: #6c757d;
+}
+button.secondary:hover {
+  background-color: #5a6268;
+}
+
+.error-msg {
+  color: #d9534f;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+li {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.item-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.card-result {
+  background-color: #f8fafc;
+  border: 1px dashed #e48602;
+}
+
+.card-result h3 {
+  color: #e48602;
+  border-bottom: 1px dashed #e48602;
+}
+
+.summary-box {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.summary-item p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #084d96;
+}
