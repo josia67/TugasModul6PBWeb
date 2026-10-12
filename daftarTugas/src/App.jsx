@@ -1,7 +1,9 @@
+import { useState, useEffect } from "react";
+import "./App.css";
 const STORAGE_KEY = "web-tasks-v1";
 
-function AplikasiDaftarTugas() {
-  const [tasks, setTasks] = React.useState(() => {
+export default function App() {
+  const [tasks, setTasks] = useState(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return [];
@@ -12,15 +14,15 @@ function AplikasiDaftarTugas() {
     }
   });
 
-  const [inputTitle, setInputTitle] = React.useState("");
-  const [errorMsg, setErrorMsg] = React.useState("");
-  const [searchQuery, setSearchQuery] = React.useState("");
-  const [activeFilter, setActiveFilter] = React.useState("all");
+  const [inputTitle, setInputTitle] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeFilter, setActiveFilter] = useState("all");
 
-  const [editingId, setEditingId] = React.useState(null);
-  const [editingText, setEditingText] = React.useState("");
+  const [editingId, setEditingId] = useState(null);
+  const [editingText, setEditingText] = useState("");
 
-  React.useEffect(() => {
+  useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
   }, [tasks]);
 
@@ -98,6 +100,10 @@ function AplikasiDaftarTugas() {
 
   return (
     <div className="container">
+      <header>
+        <h1>Aplikasi Daftar Tugas</h1>
+      </header>
+
       <section className="card">
         <form onSubmit={handleTambah} noValidate>
           <div className="form-group">
@@ -213,6 +219,3 @@ function AplikasiDaftarTugas() {
     </div>
   );
 }
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AplikasiDaftarTugas />);

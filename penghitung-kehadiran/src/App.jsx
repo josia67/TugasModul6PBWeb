@@ -1,5 +1,8 @@
-function PenghitungKehadiran() {
-  const [kehadiran, setKehadiran] = React.useState(0);
+import { useState } from "react";
+import "./App.css";
+
+export default function App() {
+  const [kehadiran, setKehadiran] = useState(0);
 
   const handleTambah = () => {
     if (kehadiran < 30) {
@@ -19,23 +22,21 @@ function PenghitungKehadiran() {
 
   return (
     <div className="container">
-      <section className="card card-result">
-        <h3>Penghitung Kehadiran</h3>
-        <div className="summary-box">
-          <div className="summary-item">
-            <h4>Total Kehadiran</h4>
-            <p>{kehadiran} / 30</p>
-          </div>
-        </div>
+      <header>
+        <h1>Sistem Kehadiran</h1>
+      </header>
 
+      <section className="card">
+        <h2>Penghitung Kehadiran</h2>
+        <p className="angka-kehadiran">{kehadiran} / 30</p>
+
+        {/* Uji Batas */}
         {kehadiran === 30 && (
-          <p className="error-msg" style={{ textAlign: "center" }}>
-            Batas maksimum (30) tercapai!
-          </p>
+          <p className="error-msg">Batas maksimum (30) telah tercapai!</p>
         )}
         {kehadiran === 0 && (
           <p
-            style={{ textAlign: "center", color: "#6c757d", fontSize: "13px" }}
+            style={{ color: "#6c757d", fontSize: "13px", marginBottom: "10px" }}
           >
             Batas minimum (0) tercapai.
           </p>
@@ -72,6 +73,3 @@ function PenghitungKehadiran() {
     </div>
   );
 }
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<PenghitungKehadiran />);
