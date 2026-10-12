@@ -30,7 +30,6 @@ function KartuProfil(props) {
   );
 }
 
-// Komponen 2: Detail Informasi
 function DetailInformasi(props) {
   return (
     <section className="card">
@@ -61,7 +60,6 @@ function DetailInformasi(props) {
   );
 }
 
-// Komponen Utama
 export default function App() {
   const namaMahasiswa = "Josia Ananda Sianturi";
   const nimMahasiswa = "255314088";

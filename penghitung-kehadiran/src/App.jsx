@@ -30,7 +30,6 @@ export default function App() {
         <h2>Penghitung Kehadiran</h2>
         <p className="angka-kehadiran">{kehadiran} / 30</p>
 
-        {/* Uji Batas */}
         {kehadiran === 30 && (
           <p className="error-msg">Batas maksimum (30) telah tercapai!</p>
         )}
